@@ -1,0 +1,24 @@
+# MORA
+
+> MORA is a Ukrainian-language graphic design portfolio and design service website focused on brand identity, packaging design, digital design and art direction.
+
+## Canonical URL
+- https://mora.design/
+
+## Contact
+- Email: hello@mora.design
+
+## Services
+- Brand identity: strategy, logo systems, typography, colors, graphic system and brand guidelines.
+- Packaging design: concepts, packaging systems, labels, adaptations and production preparation.
+- Digital design: campaign visuals, social media, landing pages and digital touchpoints.
+- Art direction: creative direction, campaigns, visual supervision and communication consistency.
+
+## Selected portfolio projects
+- Kulbaba — branding, 2026. Landscape brand identity: signs, typography, applications and visual language.
+- Naturez — packaging, 2026. Premium packaging system with a dark tactile aesthetic.
+- Sota — branding, 2025. Minimal identity with editorial typography and paper-inspired form.
+- Aster Studio — art direction, 2025. Expressive art direction with a dark palette and light accents.
+
+## Language
+- Main website language: Ukrainian (uk-UA).

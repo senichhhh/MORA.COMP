@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# OpenAI search / user-requested retrieval
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic search / user-requested retrieval
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity search
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini / grounding controls
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://mora.design/sitemap.xml
