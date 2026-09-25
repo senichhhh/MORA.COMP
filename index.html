@@ -17,7 +17,7 @@
   <link rel="canonical" href="https://mora.design/">
   <link rel="alternate" hreflang="uk-UA" href="https://mora.design/">
   <link rel="alternate" hreflang="x-default" href="https://mora.design/">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="uk_UA">
@@ -36,14 +36,11 @@
   <meta name="twitter:image" content="https://mora.design/hero-girl.png">
   <meta name="twitter:image:alt" content="MORA — графічний дизайн, брендинг та айдентика">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./fonts/fonts.css">
 
-  <link rel="preload" as="image" href="./hero-girl-960.avif" type="image/avif" imagesrcset="./hero-girl-640.avif 640w, ./hero-girl-960.avif 960w, ./hero-girl-1479.avif 1479w" imagesizes="(max-width: 720px) 105vw, (max-width: 1180px) 73vw, 46vw" fetchpriority="high">
+  <link rel="preload" as="image" href="./hero-girl-960.avif" type="image/avif" imagesrcset="./hero-girl-640.avif 640w, ./hero-girl-960.avif 960w, ./hero-girl-1479.avif 1479w" imagesizes="(max-width: 600px) 96vw, (max-width: 980px) 65vw, (min-width: 1920px) 820px, 48vw" fetchpriority="high">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./responsive.css">
 
   <script type="application/ld+json">
   {
@@ -109,7 +106,7 @@
 
   <noscript>
     <style>
-      .cinematic-intro{display:none!important}.reveal{opacity:1!important;transform:none!important}#heroImage{opacity:1!important}
+      .menu-button{display:none!important}.cinematic-intro{display:none!important}.reveal{opacity:1!important;transform:none!important}#heroImage{opacity:1!important}
     </style>
   </noscript>
 </head>
@@ -146,12 +143,12 @@
   <a class="header-cta" href="#contact">
     <span>Обговорити проєкт</span>
 
-    <svg viewBox="0 0 24 24">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
       <path d="M5 19 19 5M9 5h10v10"/>
     </svg>
   </a>
 
-  <button class="menu-button" type="button" aria-label="Відкрити меню" aria-expanded="false">
+  <button class="menu-button" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobileMenu">
     <span></span>
     <span></span>
   </button>
@@ -160,7 +157,7 @@
 
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" aria-hidden="true">
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
 
   <nav aria-label="Мобільна навігація">
     <a href="#home">Головна</a>
@@ -172,13 +169,13 @@
 
   <div class="mobile-menu__footer">
     <a href="mailto:hello@mora.design">hello@mora.design</a>
-    <span>© <span class="js-year"></span></span>
+    <span>© <span class="js-year">2026</span></span>
   </div>
 
 </div>
 
 
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 
 <!-- ======================================================
      01 HERO
@@ -200,8 +197,8 @@
       <div class="hero__portrait-glow"></div>
 
       <picture class="hero__portrait-picture">
-        <source type="image/avif" srcset="./hero-girl-640.avif 640w, ./hero-girl-960.avif 960w, ./hero-girl-1479.avif 1479w" sizes="(max-width: 720px) 105vw, (max-width: 1180px) 73vw, 46vw">
-        <source type="image/webp" srcset="./hero-girl-640.webp 640w, ./hero-girl-960.webp 960w, ./hero-girl-1479.webp 1479w" sizes="(max-width: 720px) 105vw, (max-width: 1180px) 73vw, 46vw">
+        <source type="image/avif" srcset="./hero-girl-640.avif 640w, ./hero-girl-960.avif 960w, ./hero-girl-1479.avif 1479w" sizes="(max-width: 600px) 96vw, (max-width: 980px) 65vw, (min-width: 1920px) 820px, 48vw">
+        <source type="image/webp" srcset="./hero-girl-640.webp 640w, ./hero-girl-960.webp 960w, ./hero-girl-1479.webp 1479w" sizes="(max-width: 600px) 96vw, (max-width: 980px) 65vw, (min-width: 1920px) 820px, 48vw">
         <img
           src="./hero-girl.png"
           id="heroImage"
@@ -237,7 +234,7 @@
         <span>Дивитися портфоліо</span>
 
         <i>
-          <svg viewBox="0 0 24 24">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
             <path d="M5 19 19 5M9 5h10v10"/>
           </svg>
         </i>
@@ -246,11 +243,6 @@
     </div>
 
 
-    <aside class="social-cluster reveal reveal--right" aria-label="Соціальні мережі">
-      <a href="#">Behance</a>
-      <a href="#">Instagram</a>
-      <a href="#">Pinterest</a>
-    </aside>
 
 
     <a class="scroll-hint" href="#concept-flow">
@@ -301,7 +293,7 @@
         <span>Почати проєкт</span>
 
         <i>
-          <svg viewBox="0 0 24 24">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
             <path d="M5 19 19 5M9 5h10v10"/>
           </svg>
         </i>
@@ -390,13 +382,13 @@
     <div class="portfolio__controls">
 
       <button class="round-btn project-prev" type="button" aria-label="Попередній проєкт">
-        <svg viewBox="0 0 24 24">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
           <path d="m15 18-6-6 6-6"/>
         </svg>
       </button>
 
       <button class="round-btn round-btn--hot project-next" type="button" aria-label="Наступний проєкт">
-        <svg viewBox="0 0 24 24">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
           <path d="m9 18 6-6-6-6"/>
         </svg>
       </button>
@@ -404,7 +396,7 @@
     </div>
 
 
-    <div class="project-track">
+    <div class="project-track" role="region" aria-label="Обрані проєкти — гортайте горизонтально" tabindex="0">
 
       <article
         class="project-card reveal reveal--up"
@@ -553,8 +545,8 @@
         </span>
 
         <picture>
-          <source type="image/avif" srcset="./about-hand-fox-560.avif 560w, ./about-hand-fox-840.avif 840w, ./about-hand-fox-1122.avif 1122w" sizes="(max-width: 720px) 98vw, (max-width: 860px) 520px, 540px">
-          <source type="image/webp" srcset="./about-hand-fox-560.webp 560w, ./about-hand-fox-840.webp 840w, ./about-hand-fox-1122.webp 1122w" sizes="(max-width: 720px) 98vw, (max-width: 860px) 520px, 540px">
+          <source type="image/avif" srcset="./about-hand-fox-560.avif 560w, ./about-hand-fox-840.avif 840w, ./about-hand-fox-1122.avif 1122w" sizes="(max-width: 600px) 90vw, (max-width: 900px) 480px, 540px">
+          <source type="image/webp" srcset="./about-hand-fox-560.webp 560w, ./about-hand-fox-840.webp 840w, ./about-hand-fox-1122.webp 1122w" sizes="(max-width: 600px) 90vw, (max-width: 900px) 480px, 540px">
           <img
             src="./about-hand-fox.png"
             alt="Металева скульптурна рука з помаранчевою лисицею — візуальний образ MORA"
@@ -701,7 +693,7 @@
           <span>01</span>
 
           <i>
-            <svg viewBox="0 0 24 24">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <path d="M5 19 19 5M9 5h10v10"/>
             </svg>
           </i>
@@ -732,7 +724,7 @@
           <span>02</span>
 
           <i>
-            <svg viewBox="0 0 24 24">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <path d="M5 19 19 5M9 5h10v10"/>
             </svg>
           </i>
@@ -762,7 +754,7 @@
           <span>03</span>
 
           <i>
-            <svg viewBox="0 0 24 24">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <path d="M5 19 19 5M9 5h10v10"/>
             </svg>
           </i>
@@ -792,7 +784,7 @@
           <span>04</span>
 
           <i>
-            <svg viewBox="0 0 24 24">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <path d="M5 19 19 5M9 5h10v10"/>
             </svg>
           </i>
@@ -955,7 +947,7 @@
     </div>
 
 
-    <form class="contact-form reveal reveal--right" novalidate>
+    <form class="contact-form reveal reveal--right" action="mailto:hello@mora.design" method="post" enctype="text/plain" aria-describedby="formHelp">
 
       <label>
 
@@ -963,7 +955,7 @@
 
         <input
           type="text"
-          name="name"
+          name="name" maxlength="100"
           placeholder="Ім’я та прізвище"
           autocomplete="name"
           required
@@ -978,7 +970,7 @@
 
         <input
           type="email"
-          name="email"
+          name="email" maxlength="254" spellcheck="false" autocapitalize="none"
           placeholder="name@example.com"
           autocomplete="email"
           required
@@ -992,7 +984,7 @@
         <span>Розкажіть про проєкт</span>
 
         <textarea
-          name="message"
+          name="message" maxlength="2500"
           rows="4"
           placeholder="Завдання, обсяг робіт, терміни..."
           required
@@ -1003,10 +995,10 @@
 
       <button class="pill-cta pill-cta--button" type="submit">
 
-        <span>Надіслати запит</span>
+        <span>Підготувати лист</span>
 
         <i>
-          <svg viewBox="0 0 24 24">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
             <path d="M5 19 19 5M9 5h10v10"/>
           </svg>
         </i>
@@ -1014,7 +1006,10 @@
       </button>
 
 
-      <p class="form-status" role="status" aria-live="polite"></p>
+      <p class="form-help" id="formHelp">Відкриється ваша поштова програма з готовим листом на hello@mora.design. Залишиться натиснути «Надіслати».</p>
+      <p class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <button class="copy-request" type="button" hidden>Скопіювати текст запиту</button>
+      <textarea class="request-copy" readonly aria-label="Текст запиту для копіювання" hidden></textarea>
 
     </form>
 
@@ -1041,19 +1036,14 @@
     digital та артдирекшн.
   </p>
 
-  <div class="site-footer__links">
-    <a href="#">Behance</a>
-    <a href="#">Instagram</a>
-    <a href="#">Pinterest</a>
-  </div>
 
-  <span>© <span class="js-year"></span> MORA</span>
+  <span>© <span class="js-year">2026</span> MORA</span>
 
 </footer>
 
 
 <!-- PROJECT CASE -->
-<div class="project-case" id="projectCase" aria-hidden="true">
+<div class="project-case" id="projectCase" role="dialog" aria-modal="true" aria-labelledby="projectCaseTitle" aria-describedby="projectCaseDescription" aria-hidden="true" inert>
 
   <button class="project-case__close" type="button" aria-label="Закрити кейс">
     <span></span>
@@ -1066,9 +1056,9 @@
 
     <p class="project-case__category"></p>
 
-    <h2 class="project-case__title"></h2>
+    <h2 class="project-case__title" id="projectCaseTitle"></h2>
 
-    <p class="project-case__description"></p>
+    <p class="project-case__description" id="projectCaseDescription"></p>
 
     <div class="project-case__footer">
 
@@ -1079,7 +1069,7 @@
         <span>Обговорити схожий проєкт</span>
 
         <i>
-          <svg viewBox="0 0 24 24">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
             <path d="M5 19 19 5M9 5h10v10"/>
           </svg>
         </i>
@@ -1096,4 +1086,5 @@
 <script src="./script.js" defer></script>
 
 </body>
+</html>
 </html>
